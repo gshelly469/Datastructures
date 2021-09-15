@@ -15,8 +15,7 @@ bool wordBreak(string s, vector<string>& wordDict) {
             return true;
         }
         for (int end = start + 1; end <= s.length(); end++) {
-            if (word_set.find(s.substr(start, end - start)) != word_set.end() and
-                wordBreakRecur(s, word_set, end)) {
+            if (word_set.find(s.substr(start, end - start)) != word_set.end() && wordBreakRecur(s, word_set, end)) {
                 return true;
             }
         }
